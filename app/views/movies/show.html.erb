@@ -1,3 +1,6 @@
+<p><%= notice %></p>
+<p><%= alert %></p>
+
 <div>
   <div>
     <h1>
@@ -37,7 +40,7 @@
         Director
       </dt>
       <dd>
-        <%= @the_movie.director_id %>
+        <%= @the_movie.director.name %>
       </dd>
 
       <dt>
@@ -74,6 +77,20 @@
 
         <input type="text" id="title_box" name="query_title" value="<%= @the_movie.title %>">
       </div>
+      <div>
+        <label for="year_box">
+          Year
+        </label>
+
+        <input type="text" id="year_box" name="query_year" value="<%= @the_movie.year %>">
+      </div>
+      <div>
+        <label for="duration_box">
+          Duration
+        </label>
+
+        <input type="text" id="duration_box" name="query_duration" value="<%= @the_movie.duration %>">
+      </div>
 
       <div>
         <label for="description_box">
@@ -81,6 +98,13 @@
         </label>
 
         <textarea id="description_box" name="query_description"><%= @the_movie.description %></textarea>
+      </div>
+      <div>
+        <label for="image_box">
+          Image
+        </label>
+
+        <textarea id="image_box" name="query_image"><%= @the_movie.image %></textarea>
       </div>
 
       <div>
